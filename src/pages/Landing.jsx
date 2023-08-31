@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Hero } from '../components';
+import FeaturedProducts from '../components/FeaturedProducts';
 import { customFetch } from '../utils/customFetch';
 
 const url = '/products?featured=true';
@@ -15,6 +16,7 @@ const Landing = () => {
   return (
     <div>
       <Hero />
+      <FeaturedProducts />
     </div>
   );
 };
