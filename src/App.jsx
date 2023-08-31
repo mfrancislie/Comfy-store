@@ -13,6 +13,11 @@ import {
   Checkout,
   Orders,
 } from './pages';
+
+// loader
+import { loader as landingLoader } from './pages/Landing';
+import { ErrorElement } from './components';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -23,6 +28,8 @@ function App() {
         {
           index: true,
           element: <Landing />,
+          loader: landingLoader,
+          errorElement: ErrorElement,
         },
         {
           path: 'products',
