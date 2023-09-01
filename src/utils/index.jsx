@@ -7,11 +7,11 @@ export const customFetch = axios.create({
 });
 
 export const formatPrice = (price) => {
-  const dollarsAmount = new Intl.NumberFormat('en-US', {
+  const pisoAmount = new Intl.NumberFormat('en-PH', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'PHP',
   }).format((price / 100).toFixed(2));
-  return dollarsAmount;
+  return pisoAmount;
 };
 
 export const generateAmountOptions = (number) => {
