@@ -17,6 +17,7 @@ import {
 // loader
 import { loader as landingLoader } from './pages/Landing';
 import { loader as singleProductLoader } from './pages/SingleProduct';
+import { loader as productLsoader } from './pages/Products';
 import { ErrorElement } from './components';
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
         {
           path: 'products',
           element: <Products />,
+          loader: productLsoader,
+          errorElement: ErrorElement,
         },
         {
           path: 'products/:id',
