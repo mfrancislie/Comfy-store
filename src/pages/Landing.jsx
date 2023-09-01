@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Hero } from '../components';
 import FeaturedProducts from '../components/FeaturedProducts';
-import { customFetch } from '../utils/customFetch';
+import { customFetch } from '../utils';
 
 const url = '/products?featured=true';
 

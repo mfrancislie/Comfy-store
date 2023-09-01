@@ -16,6 +16,7 @@ import {
 
 // loader
 import { loader as landingLoader } from './pages/Landing';
+import { loader as singleProductLoader } from './pages/SingleProduct';
 import { ErrorElement } from './components';
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
         {
           path: 'products/:id',
           element: <SingleProduct />,
+          loader: singleProductLoader,
+          errorElement: ErrorElement,
         },
         {
           path: 'cart',

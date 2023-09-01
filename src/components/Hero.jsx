@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
-import hero1 from '../assets/hero1.webp';
+import hero2 from '../assets/hero2.webp';
 // const carouselImages = [hero1, hero2, hero3, hero4];
 const Hero = () => {
   return (
@@ -24,10 +24,7 @@ const Hero = () => {
       </div>
 
       <div className="hidden  h-[28rem] lg:carousel carousel-center   p-4 space-x-4  rounded-box">
-        <img
-          src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/1.webp"
-          className="max-w-sm rounded-lg"
-        />
+        <img src={hero2} className="max-w-sm rounded-lg" />
       </div>
     </div>
   );
