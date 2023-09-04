@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { customFetch } from '../utils';
 import SectionTitle from '../components/SectionTitle';
 import { OrderList, PaginationContainer } from '../components';
+import ComplexPaginationContainer from '../components/ComplexPaginationContainer';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const loader =
@@ -49,7 +50,7 @@ const Orders = () => {
     <>
       <SectionTitle text="Your Orders" />
       <OrderList />
-      <PaginationContainer />
+      <ComplexPaginationContainer />
     </>
   );
 };
