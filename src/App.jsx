@@ -20,6 +20,8 @@ import { loader as singleProductLoader } from './pages/SingleProduct';
 import { loader as productLsoader } from './pages/Products';
 import { ErrorElement } from './components';
 
+// actions
+import { action as registerAction } from './pages/Register';
 function App() {
   const router = createBrowserRouter([
     {
@@ -71,6 +73,7 @@ function App() {
     {
       path: '/register',
       element: <Register />,
+      action: registerAction,
       errorElement: <Error />,
     },
   ]);
