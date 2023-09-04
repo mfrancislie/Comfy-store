@@ -1,7 +1,9 @@
 /* eslint-disable no-constant-condition */
-import { redirect } from 'react-router-dom';
+import { redirect, useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { customFetch } from '../utils';
+import SectionTitle from '../components/SectionTitle';
+import { OrderList, PaginationContainer } from '../components';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const loader =
@@ -37,7 +39,18 @@ export const loader =
       return null;
     }
   };
+
 const Orders = () => {
-  return <h1 className="text-3xl">orders</h1>;
+  const { meta } = useLoaderData();
+  if (meta.pagination.total < 1) {
+    return <SectionTitle text="Please make an order" />;
+  }
+  return (
+    <>
+      <SectionTitle text="Your Orders" />
+      <OrderList />
+      <PaginationContainer />
+    </>
+  );
 };
 export default Orders;
