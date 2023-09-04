@@ -22,6 +22,9 @@ import { ErrorElement } from './components';
 
 // actions
 import { action as registerAction } from './pages/Register';
+import { action as loginAction } from './pages/Login';
+import { store } from './store';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -68,6 +71,7 @@ function App() {
     {
       path: '/login',
       element: <Login />,
+      action: loginAction(store),
       errorElement: <Error />,
     },
     {
